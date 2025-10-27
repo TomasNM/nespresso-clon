@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NespressoLucas Regular', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.05em;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.header-cont{
+    width: 100%;
+    height: 40px;
+    background-color: #FFFACD;
+}
+
+.header-cont-content{
+    max-width: 1160px;
+    height: 100%;
+    background-color: #FFFACD;
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header-slider{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.header-slider p{
+    font-size: 12px;
+}
+
+.header-slider p{
+    text-align: center;
+}
+
+.slides{
+    display: flex;
+    align-items: center;
+    transform: translateX(0px);
+    transition: all .5s ease-in-out;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 100%;
+    flex-shrink: 1;
+}
+
+.prev, .next{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.prev:hover, .next:hover{
+    color: rgb(0, 0, 0);
+}
+
+.header-nav-cont{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-nav{
+    display: flex;
+    max-width: 1160px;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.nav-btns{
+    display: flex;
+    gap: 18px;
+}
+
+.nav-btns button{
+    border-radius: 100px;
+    padding: 4px 16px 4px 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid rgb(240, 240, 240);
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+}
+
+.searchBtn:hover{
+    background-color: #F3EEE6;
+}
+
+.registerBtn:hover{
+    color: white;
+    background-color: black;
+}
+
+.cartBtn:hover{
+    color: white;
+    background-color: black;
+}
+
+.cartMenu{
+    position: absolute;
+    z-index: 9999;
+    width: 415px;
+    height: 100%;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: all .2s ease-in-out;
+    pointer-events: none;
+}
+
+.cartMenu.active{
+    transform: scaleX(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.searchBtn{
+    border: 1px solid rgb(240, 240, 240)!important;
+}
+
+.header-links-cont{
+    width: 100%;
+    height: 47px;
+    z-index: -1;
+    position: absolute;
+}
+
+.header-links{
+    max-width: 1160px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-links ul{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'NespressoLucas Bold', sans-serif !important;
+    width: 100%;
+    justify-content: space-around;
+    padding: 13px 6.5px 13px 6.5px;
+
+}
+
+.main-links{
+    color: black;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: solid 3px transparent;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}
+
+.main-links:hover{
+    border-bottom: solid 3px black;
+}
+
+
+.registerBtn{
+    position: relative;
+}
+
+.register-container{
+    position: relative;
+}
+
+.registerMenu{
+    position: absolute;
+    width: 230px;
+    height: 465px;
+    background-color: rgb(255, 255, 255);
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+}
+
+.overlay{
+    position: fixed;
+    background-color: black;
+    /* opacity: 70%; */
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+}
+
+.registerMenu.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.overlay.active{
+    opacity: 0.7;
+    pointer-events: all;
+}
+
+.circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #D8AE00;
+    left: 94%;
+    bottom: 75%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    10%{
+        transform: scale(1.1);
+    }
+    20%{
+        transform: scale(1);
+    }
+}
+
+.menu-open{
+    position: absolute;
+    width: 100%;
+    height: 248px;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.5);
+    padding: 10px;
+    display: flex;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: oapcity .2s ease-in-out, transform .2s ease-in-out;
+    pointer-events: none;
+}
+
+.img-menu{
+    width: 100px;
+    height: 100px;
+}
+
+.items{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item p{
+    padding-bottom: 18px;
+}
+
+.divisor{
+    height: 100%;
+    width: 0;
+    border: 1px solid black;
+    opacity: 10%;
+}
+
+.visibleMenu{
+    opacity: 1;
+    transform: scaleY(1);
+    pointer-events: auto;
+}
+
+.item p{
+    font-size: 15px;
+}
+
+.login-register-cont{
+    padding: 14px;
+}
+
+.input-email{
+    width: 202px;
+    height: 47px;
+    padding: 10px 6px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid rgb(201, 201, 201);
+}
+
+.input-email:focus{
+    outline: solid 1px black;
+    box-shadow: none;
+}
+
+.input-password{
+    width: 202px;
+    padding: 10px 6px;
+    height: 47px;
+    border-radius: 4px;
+    border: 1px solid rgb(201, 201, 201);
+    margin-bottom: 20px;
+}
+
+.input-password:focus{
+    outline: solid 1px black;
+    box-shadow: none;
+}
+
+.forgotPass{
+    font-size: 14px;
+    color: #986f38;
+    font-weight: 500;
+}
+
+.forgotPass:hover .forgotText{
+    border-bottom: solid 1px #986f38;
+}
+
+.loginBtn{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px !important;
+    margin-top: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.loginBtn svg{
+    position: absolute;
+    right: 10px;
+    width: 20px;
+}
+
+.loginBtn:hover{
+    color: white;
+    background-color: black;
+}
+
+.loginDivisor{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    height: 1px;
+    background-color: rgb(240, 240, 240);
+}
+
+.carrito-cont{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close-cart-btn{
+    padding: 2px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    background-color: rgb(250, 250, 250);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.close-cart-btn:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.text-cont{
+    width: 100%;
+    height: 168px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    padding: 15px;
+    background-color: #f3EEE6;
+}
+
+.cart-divisor{
+    width: 70%;
+}
+
+.first-text{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.second-text{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-products{
+    width: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.empty-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.search-cont{
+    display: flex;
+    align-items: center;
+}
+
+.search-bar{
+    padding: 8px 16px;
+    width: 304px;
+    height: 40px;
+    border: 1px solid rgb(240, 240, 240);
+    display: none;
+}
+
+.search-bar:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.searchBtn.hidden{
+    display: none;
+}
+
+.search-bar.active{
+    display: block;
+}

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nespresso Clon</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="cartMenu">
+            <div class="carrito-cont">
+                <p class="carrito">CARRITO DE COMPRAS</p>
+                <button class="close-cart-btn">X</button>
+            </div>
+            <div class="text-cont">
+
+                <div class="first-text">
+                    <p style="font-weight: bold;">3 cuotas SIN INTERÉS</p>
+                    <p>a partir de <span style="font-weight: bold;">$164.700</span></p>
+                </div>
+                
+
+                <hr class="cart-divisor">
+
+                <div class="second-text">
+                    <p style="font-weight: bold;">ENVÍO GRATIS</p>
+                    <p>en pedidos desde <span style="font-weight: bold;">50 cápsulas</span></p>
+                </div>
+                
+            </div>
+            <div class="cart-products">
+                <div class="empty-cart">
+                    <p>Tu carrito está vacío</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENÚ LINKS MOBILE -->
+        <div class="menu-mobile-cont">
+            <ul class="menu-mobile">
+                <li class="link-mobile">
+                    <a class="logo-name">
+                        <div class="img-cont"></div>
+                        <p>Promociones</p>
+                    </a>
+                </li>
+                <li class="link-mobile" data-dropdown="cafe">
+                    <div class="logo-name">
+                        <div class="img-cont-first"></div>
+                        <p>Café</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile" data-dropdown="maquinas">
+                    <div class="logo-name">
+                        <div class="img-cont-scnd"></div>
+                        <p>Máquinas</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile" data-dropdown="accesorios">
+                    <div class="logo-name">
+                        <div class="img-cont-thrd"></div>
+                        <p>Accesorios</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile" data-dropdown="servicios">
+                    <div class="logo-name">
+                        <div class="img-cont-frth"></div>
+                        <p>Servicios</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile">
+                    <a href="#" class="logo-name">
+                        <div class="img-cont-fifth"></div>
+                        Coffee Lovers
+                    </a>
+                </li>
+                <li class="link-mobile" data-dropdown="reciclaje">
+                    <div class="logo-name">
+                        <div class="img-cont-sixth"></div>
+                        <p>Reciclaje</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile" data-dropdown="ayuda">
+                    <div class="logo-name">
+                        <div class="img-cont-seventh"></div>
+                        <p>Ayuda</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile" data-dropdown="proffesional">
+                    <div class="logo-name">
+                        <div class="img-cont-eigth"></div>
+                        <p>Professional</p>
+                    </div>
+                    <button class="dropdown-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                        </svg>
+                    </button>
+                </li>
+                <li class="link-mobile">
+                    <a href="#" class="logo-name">
+                        <div class="img-cont-nineth"></div>
+                        Seguí tu pedido
+                    </a>
+                </li>
+            </ul>
+
+            <div class="dropdownCont" data-dropdown="cafe">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Pedí tus cápsulas</a></li>
+                    <li class="linkItem"><a href="#">Packs de café</a></li>
+                    <li class="linkItem"><a href="#">Encontrá tu café ideal</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="maquinas">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Comprá tu máquina</a></li>
+                    <li class="linkItem"><a href="#">Activá tu garantía</a></li>
+                    <li class="linkItem"><a href="#">Servicio técnico para tu máquina</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="accesorios">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Comprá accesorios</a></li>
+                    <li class="linkItem"><a href="#">Tazas de café</a></li>
+                    <li class="linkItem"><a href="#">Recycling Bin</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="servicios">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Cómo hacer mi pedido</a></li>
+                    <li class="linkItem"><a href="#">Servicios de entrega</a></li>
+                    <li class="linkItem"><a href="#">Servicio técnico para tu máquina</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="reciclaje">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Puntos de reciclaje</a></li>
+                    <li class="linkItem"><a href="#">Campaña de reciclaje</a></li>
+                    <li class="linkItem"><a href="#">Empresa B</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="ayuda">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Preguntas frecuentes</a></li>
+                    <li class="linkItem"><a href="#" style="color: #418200;">Servicio técnico para tu máquina</a></li>
+                    <li class="linkItem"><a href="#">Whatsapp</a></li>
+                    <li class="linkItem"><a href="#">Contactanos</a></li>
+                </ul>
+            </div>
+            <div class="dropdownCont" data-dropdown="proffesional">
+                <ul class="dropdownLinks">
+                    <li class="linkItem"><a href="#">Restaurantes</a></li>
+                    <li class="linkItem"><a href="#">Hoteles</a></li>
+                    <li class="linkItem"><a href="#">Oficinas</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- ----------------- -->
+
+        <div class="header-cont">
+            <div class="header-cont-content">
+                <button class="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.2 5h-1.4l-7 7 7 7h1.4l-7-7 7-7Z"/>
+                    </svg>
+                </button>
+                <div class="header-slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 65 64" fill="none"><path d="M37.5 3.88232L12.5 16.3823V26.0005H14.5V18.6186L36.5 29.6186V57.3833L14.5 46.3833V44.0005H12.5V47.6177L37.5 60.1177L62.5 47.6177V16.3823L37.5 3.88232ZM59.2637 17.0005L49.5 21.8823L27.7363 11.0005L37.5 6.11864L59.2637 17.0005ZM37.5 27.8823L15.7363 17.0005L25.5 12.1186L47.2637 23.0005L37.5 27.8823ZM38.5 57.3833V29.6186L48.5 24.6186V31.5005L50.5 30.5005V23.6186L60.5 18.6186V46.3833L38.5 57.3833Z" fill="black"></path><path d="M16.5 34.0005H2.5V36.0005H16.5V34.0005Z" fill="black"></path><path d="M22.5 40.0005H8.5V42.0005H22.5V40.0005Z" fill="black"></path><path d="M20.5 28.0005H6.5V30.0005H20.5V28.0005Z" fill="black"></path></svg>
+                            <p>ENVÍO GRATIS en pedidos desde 50 capsulas</p> 
+                        </div>
+                    
+                        <div class="slide">
+                            <p>3 cuotas SIN  INTERÉS a partir de $164.700</p>
+                        </div>
+
+                        <div class="slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 65 64" fill="none"><path d="M37.5 3.88232L12.5 16.3823V26.0005H14.5V18.6186L36.5 29.6186V57.3833L14.5 46.3833V44.0005H12.5V47.6177L37.5 60.1177L62.5 47.6177V16.3823L37.5 3.88232ZM59.2637 17.0005L49.5 21.8823L27.7363 11.0005L37.5 6.11864L59.2637 17.0005ZM37.5 27.8823L15.7363 17.0005L25.5 12.1186L47.2637 23.0005L37.5 27.8823ZM38.5 57.3833V29.6186L48.5 24.6186V31.5005L50.5 30.5005V23.6186L60.5 18.6186V46.3833L38.5 57.3833Z" fill="black"></path><path d="M16.5 34.0005H2.5V36.0005H16.5V34.0005Z" fill="black"></path><path d="M22.5 40.0005H8.5V42.0005H22.5V40.0005Z" fill="black"></path><path d="M20.5 28.0005H6.5V30.0005H20.5V28.0005Z" fill="black"></path></svg>
+                            <p>Retirá tu pedido GRATIS en tu boutique más cercana en 1 hora</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                    </svg>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="header-nav-cont">
+            <div class="header-nav">
+                <div class="burgerMenuCont">
+
+                    <button class="burgerMenu">
+                        <div class="bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </button>
+
+                    <div class="logoMobile">
+                        <a href="#">
+                            <svg id="AW" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 100.53" width="157px">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                        fill: #000000;
+                                        stroke-width: 0px;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="cls-1" d="m242.16,16.97h-33.46v66.84h16.95s0-19.92,0-19.92v-4.57s24.18,1.33,31-7.7c5.09-5.82,5.38-15.1,3.28-22.29-2.78-8.17-8.87-12.37-17.78-12.36Zm1.92,30.11c-3.97,4.68-12.71,4.62-18.53,4.22l.06-26.8s15.06-2.1,19.03,4.74c2.29,4.09,2.83,13.3-.57,17.85Zm-143.97,47.63c-6.07-2.26-14.78-9-19.8-15.17-6.49-7.41-22.02-28.31-22.02-28.31-7.99-10.31-18.68-27.44-29.25-36.07v68.51h9.44v-34.58c6.64,8.47,14.43,19.3,20.26,26.14,2.57,3.07,9.2,10.25,11.08,11.83,12.15,11.85,34.46,17.16,53.07,10.66v-.65c-6.4,1.37-14.65.87-22.77-2.37ZM42.57,21c6.49,7.41,22.02,28.31,22.02,28.31,7.99,10.31,18.68,27.44,29.25,36.07V16.87h-9.44v34.58c-6.64-8.47-14.43-19.3-20.26-26.14-2.57-3.07-9.2-10.25-11.08-11.83C40.92,1.62,18.61-3.7,0,2.8v.65c6.4-1.37,14.65-.87,22.78,2.37,6.07,2.26,14.78,9,19.8,15.17Zm106.5,3.45l.05-7.48h-45.77v66.84h45.77l-.05-7.48c-8.77.22-19.77,1.61-28.79.73v-24c7.31-.39,16.19-.26,22.98.37v-7.93c-6.91.88-15.61.81-22.98.35v-22.08c9.02-.93,20.03.51,28.79.68Zm47.32,26.88c-7.73-6.7-17.12-8.8-23.74-13.34-4.65-3.58-3.93-8.21-1.58-10.71,5.57-6.21,17.19-3.28,19.89-2.65,3.42,1.01,5.26,2.08,8.53,3.54v-8.38c-13.86-4.04-36.04-7.9-44.79,6.05-3.22,5.74-4.05,16.15,5.2,22.2,9.33,7.42,24.65,10.97,26.55,16.96,1.17,3.27-.24,6.41-2.44,8.63-8.29,7.68-21.57,2.86-30.15-.95l-.02,8.27c9.29,4.17,21.04,5.24,31.46,2.99,7.15-1.59,15.16-7.89,16.44-15.66,1.31-7.66-.32-12.67-5.37-16.95Zm126.24,28.99l-2.07-3.93c-4.44-8.29-7.99-15.23-11.88-24.22.41-.29.32-.15,1.48-.71,6.19-2.95,10.29-8.3,10.18-17.54-.29-11.34-10.66-16.96-19.71-16.95h-33.9v66.84h17.04s0-27.62,0-27.62h9.69c3.23,5.39,9.81,20.71,10.84,23.12l2.01,4.5h18.17l-1.64-3.11c-.07-.12-.13-.25-.2-.38Zm-21.01-35.89c-4,4.8-12.27,4.45-18,4.43v-24.49s14.56-2.18,18.57,4.82c2.07,3.92,2.32,11.29-.57,15.24Zm216.26-28.47c-4.43-.03-33.08.44-33.2,34.17,0,33.49,28.29,34.82,33.2,34.78,4.89.03,33.21-1.3,33.13-34.78-.05-33.73-28.67-34.2-33.12-34.17Zm.11,59.63h-.25c-1.86,0-15.55.58-15.46-26.75.11-25.35,13.42-24.63,15.61-24.63,2.2,0,15.49-.72,15.61,24.63.1,27.33-13.61,26.75-15.51,26.75Zm-94.65-24.27c-7.73-6.7-17.12-8.8-23.74-13.34-4.65-3.58-3.94-8.21-1.58-10.71,5.57-6.21,17.19-3.28,19.89-2.65,3.42,1.01,5.26,2.08,8.53,3.54v-8.38c-13.85-4.04-36.04-7.9-44.79,6.05-3.21,5.74-4.05,16.15,5.21,22.2,9.33,7.42,24.65,10.97,26.55,16.96,1.17,3.27-.24,6.41-2.44,8.63-8.28,7.68-21.57,2.86-30.15-.95l-.02,8.27c9.29,4.17,21.04,5.24,31.46,2.99,7.15-1.59,15.16-7.89,16.45-15.66,1.31-7.66-.32-12.67-5.37-16.95Zm51.9,0c-7.71-6.7-17.11-8.8-23.69-13.34-4.67-3.58-3.97-8.21-1.63-10.71,5.56-6.21,17.17-3.28,19.89-2.65,3.44,1.01,5.29,2.08,8.55,3.54v-8.38c-13.89-4.04-36.06-7.9-44.8,6.05-3.25,5.74-4.09,16.15,5.21,22.2,9.36,7.42,24.67,10.97,26.53,16.96,1.2,3.27-.18,6.41-2.45,8.63-8.25,7.68-21.55,2.86-30.1-.95l-.06,8.27c9.31,4.17,21.05,5.24,31.49,2.99,7.19-1.59,15.16-7.89,16.5-15.66,1.25-7.66-.37-12.67-5.44-16.95Zm-145.14,32.48h45.73v-7.48c-8.81.22-19.81,1.61-28.81.73v-24c7.3-.39,16.2-.26,23.02.37v-7.93c-6.97.88-15.65.81-23.04.35,0-1.42.02-22.08.02-22.08,9-.93,20,.51,28.81.68v-7.48h-45.73v66.84Z"/>
+                            </svg>
+                        </a>
+                    
+                    </div>
+                </div>
+
+                <div class="logo">
+                        <a href="#">
+                            <svg id="AW" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 100.53" width="157px">
+                                <defs>
+                                    <style>
+                                        .cls-1 {
+                                        fill: #000000;
+                                        stroke-width: 0px;
+                                        }
+                                    </style>
+                                </defs>
+                                <path class="cls-1" d="m242.16,16.97h-33.46v66.84h16.95s0-19.92,0-19.92v-4.57s24.18,1.33,31-7.7c5.09-5.82,5.38-15.1,3.28-22.29-2.78-8.17-8.87-12.37-17.78-12.36Zm1.92,30.11c-3.97,4.68-12.71,4.62-18.53,4.22l.06-26.8s15.06-2.1,19.03,4.74c2.29,4.09,2.83,13.3-.57,17.85Zm-143.97,47.63c-6.07-2.26-14.78-9-19.8-15.17-6.49-7.41-22.02-28.31-22.02-28.31-7.99-10.31-18.68-27.44-29.25-36.07v68.51h9.44v-34.58c6.64,8.47,14.43,19.3,20.26,26.14,2.57,3.07,9.2,10.25,11.08,11.83,12.15,11.85,34.46,17.16,53.07,10.66v-.65c-6.4,1.37-14.65.87-22.77-2.37ZM42.57,21c6.49,7.41,22.02,28.31,22.02,28.31,7.99,10.31,18.68,27.44,29.25,36.07V16.87h-9.44v34.58c-6.64-8.47-14.43-19.3-20.26-26.14-2.57-3.07-9.2-10.25-11.08-11.83C40.92,1.62,18.61-3.7,0,2.8v.65c6.4-1.37,14.65-.87,22.78,2.37,6.07,2.26,14.78,9,19.8,15.17Zm106.5,3.45l.05-7.48h-45.77v66.84h45.77l-.05-7.48c-8.77.22-19.77,1.61-28.79.73v-24c7.31-.39,16.19-.26,22.98.37v-7.93c-6.91.88-15.61.81-22.98.35v-22.08c9.02-.93,20.03.51,28.79.68Zm47.32,26.88c-7.73-6.7-17.12-8.8-23.74-13.34-4.65-3.58-3.93-8.21-1.58-10.71,5.57-6.21,17.19-3.28,19.89-2.65,3.42,1.01,5.26,2.08,8.53,3.54v-8.38c-13.86-4.04-36.04-7.9-44.79,6.05-3.22,5.74-4.05,16.15,5.2,22.2,9.33,7.42,24.65,10.97,26.55,16.96,1.17,3.27-.24,6.41-2.44,8.63-8.29,7.68-21.57,2.86-30.15-.95l-.02,8.27c9.29,4.17,21.04,5.24,31.46,2.99,7.15-1.59,15.16-7.89,16.44-15.66,1.31-7.66-.32-12.67-5.37-16.95Zm126.24,28.99l-2.07-3.93c-4.44-8.29-7.99-15.23-11.88-24.22.41-.29.32-.15,1.48-.71,6.19-2.95,10.29-8.3,10.18-17.54-.29-11.34-10.66-16.96-19.71-16.95h-33.9v66.84h17.04s0-27.62,0-27.62h9.69c3.23,5.39,9.81,20.71,10.84,23.12l2.01,4.5h18.17l-1.64-3.11c-.07-.12-.13-.25-.2-.38Zm-21.01-35.89c-4,4.8-12.27,4.45-18,4.43v-24.49s14.56-2.18,18.57,4.82c2.07,3.92,2.32,11.29-.57,15.24Zm216.26-28.47c-4.43-.03-33.08.44-33.2,34.17,0,33.49,28.29,34.82,33.2,34.78,4.89.03,33.21-1.3,33.13-34.78-.05-33.73-28.67-34.2-33.12-34.17Zm.11,59.63h-.25c-1.86,0-15.55.58-15.46-26.75.11-25.35,13.42-24.63,15.61-24.63,2.2,0,15.49-.72,15.61,24.63.1,27.33-13.61,26.75-15.51,26.75Zm-94.65-24.27c-7.73-6.7-17.12-8.8-23.74-13.34-4.65-3.58-3.94-8.21-1.58-10.71,5.57-6.21,17.19-3.28,19.89-2.65,3.42,1.01,5.26,2.08,8.53,3.54v-8.38c-13.85-4.04-36.04-7.9-44.79,6.05-3.21,5.74-4.05,16.15,5.21,22.2,9.33,7.42,24.65,10.97,26.55,16.96,1.17,3.27-.24,6.41-2.44,8.63-8.28,7.68-21.57,2.86-30.15-.95l-.02,8.27c9.29,4.17,21.04,5.24,31.46,2.99,7.15-1.59,15.16-7.89,16.45-15.66,1.31-7.66-.32-12.67-5.37-16.95Zm51.9,0c-7.71-6.7-17.11-8.8-23.69-13.34-4.67-3.58-3.97-8.21-1.63-10.71,5.56-6.21,17.17-3.28,19.89-2.65,3.44,1.01,5.29,2.08,8.55,3.54v-8.38c-13.89-4.04-36.06-7.9-44.8,6.05-3.25,5.74-4.09,16.15,5.21,22.2,9.36,7.42,24.67,10.97,26.53,16.96,1.2,3.27-.18,6.41-2.45,8.63-8.25,7.68-21.55,2.86-30.1-.95l-.06,8.27c9.31,4.17,21.05,5.24,31.49,2.99,7.19-1.59,15.16-7.89,16.5-15.66,1.25-7.66-.37-12.67-5.44-16.95Zm-145.14,32.48h45.73v-7.48c-8.81.22-19.81,1.61-28.81.73v-24c7.3-.39,16.2-.26,23.02.37v-7.93c-6.97.88-15.65.81-23.04.35,0-1.42.02-22.08.02-22.08,9-.93,20,.51,28.81.68v-7.48h-45.73v66.84Z"/>
+                            </svg>
+                        </a>
+                    
+                    </div>
+                <div class="nav-btns">
+                    <div class="search-cont">
+                        <button class="searchMobile">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.3535 20.6465L15.2926 14.5856C16.3854 13.3056 17 11.5721 17 9.5C17 4.94385 14.0557 2 9.5 2C4.87402 2 2 4.87402 2 9.5C2 14.0557 4.94385 17 9.5 17C11.5721 17 13.3056 16.3854 14.5856 15.2926L20.6465 21.3535L21.3535 20.6465ZM3 9.5C3 5.42969 5.42969 3 9.5 3C13.4482 3 16 5.55127 16 9.5C16 13.4482 13.4482 16 9.5 16C5.55127 16 3 13.4482 3 9.5Z" fill="#17171A"/>
+                            </svg>
+                        </button>
+                        <button class="searchBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.3535 20.6465L15.2926 14.5856C16.3854 13.3056 17 11.5721 17 9.5C17 4.94385 14.0557 2 9.5 2C4.87402 2 2 4.87402 2 9.5C2 14.0557 4.94385 17 9.5 17C11.5721 17 13.3056 16.3854 14.5856 15.2926L20.6465 21.3535L21.3535 20.6465ZM3 9.5C3 5.42969 5.42969 3 9.5 3C13.4482 3 16 5.55127 16 9.5C16 13.4482 13.4482 16 9.5 16C5.55127 16 3 13.4482 3 9.5Z" fill="#17171A"/>
+                            </svg>
+
+                            Buscar
+                        </button>
+                        <input type="text" name="search-bar" id="search-bar" class="search-bar" placeholder="Buscar">
+                    </div>
+                    
+                    <button class="register-mobile">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.793 2C6.53125 2 2.79297 5.73828 2.79297 12C2.79297 18.2617 6.53125 22 12.793 22C19.0547 22 22.793 18.2617 22.793 12C22.793 5.73828 19.0547 2 12.793 2ZM12.793 3C18.5127 3 21.793 6.28027 21.793 12C21.793 14.4615 21.1819 16.468 20.0339 17.9589C19.1573 15.2221 17.4484 13.6677 14.7655 13.1853C15.4212 12.5029 15.793 11.4215 15.793 10C15.793 7.49512 14.6719 6 12.793 6C10.9145 6 9.79297 7.49512 9.79297 10C9.79297 11.4214 10.1649 12.5027 10.8205 13.1852C8.13776 13.6675 6.42963 15.2221 5.55243 17.9595C4.40405 16.4685 3.79297 14.4619 3.79297 12C3.79297 6.28027 7.07324 3 12.793 3ZM10.793 10C10.793 8.87939 11.0527 7 12.793 7C14.5332 7 14.793 8.87939 14.793 10C14.793 11.1206 14.5332 13 12.793 13C11.0527 13 10.793 11.1206 10.793 10ZM6.33576 18.812C7.20148 15.4957 9.19672 14 12.793 14C16.3879 14 18.3835 15.4978 19.2495 18.8125C17.7208 20.2349 15.5422 21 12.793 21C10.0433 21 7.86444 20.2347 6.33576 18.812Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <div class="register-container">
+                        <button class="registerBtn">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.793 2C6.53125 2 2.79297 5.73828 2.79297 12C2.79297 18.2617 6.53125 22 12.793 22C19.0547 22 22.793 18.2617 22.793 12C22.793 5.73828 19.0547 2 12.793 2ZM12.793 3C18.5127 3 21.793 6.28027 21.793 12C21.793 14.4615 21.1819 16.468 20.0339 17.9589C19.1573 15.2221 17.4484 13.6677 14.7655 13.1853C15.4212 12.5029 15.793 11.4215 15.793 10C15.793 7.49512 14.6719 6 12.793 6C10.9145 6 9.79297 7.49512 9.79297 10C9.79297 11.4214 10.1649 12.5027 10.8205 13.1852C8.13776 13.6675 6.42963 15.2221 5.55243 17.9595C4.40405 16.4685 3.79297 14.4619 3.79297 12C3.79297 6.28027 7.07324 3 12.793 3ZM10.793 10C10.793 8.87939 11.0527 7 12.793 7C14.5332 7 14.793 8.87939 14.793 10C14.793 11.1206 14.5332 13 12.793 13C11.0527 13 10.793 11.1206 10.793 10ZM6.33576 18.812C7.20148 15.4957 9.19672 14 12.793 14C16.3879 14 18.3835 15.4978 19.2495 18.8125C17.7208 20.2349 15.5422 21 12.793 21C10.0433 21 7.86444 20.2347 6.33576 18.812Z" fill="currentColor"/>
+                            </svg>
+
+                            Iniciá sesión / registrate
+                            <div class="circle">
+                            
+                            </div>
+                        </button>
+
+                        <div class="registerMenu">
+                            <div class="login-register-cont">
+                                <h2 style="font-size: 14px;">INICIÁ SESIÓN</h2>
+                                <p style="font-size: 11px; margin: 10px 0px 20px;">Accedé a tu cuenta y realizá un pedido</p>
+                                <div>
+                                    <form action="#">
+                                        <div class="email-cont">
+                                            <input type="email" name="email" id="email" class="input-email">
+                                        
+                                            <input type="password" name="" id="" class="input-password">
+                                        </div>
+
+                                        <a href="#" class="forgotPass">¿<span class="forgotText">Olvidaste tu contraseña?</span></a>
+                                        <div style="display: flex; margin-top: 20px; gap: 10px;">
+                                            <input type="checkbox" name="" id="">
+                                            <p>Recordarme</p>
+                                        </div>
+                                        <button class="loginBtn">
+                                            INICIAR SESIÓN
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/></svg>
+                                        </button>
+                                    </form>
+                                </div>
+                                <hr class="loginDivisor">
+                                <p style="font-size: 12px; margin-bottom: 20px;">¿Todavía no tenés cuenta?</p>
+                                <button class="loginBtn">
+                                    REGISTRARSE
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <button class="cartMobile">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 7V6C15 2.69385 13.3682 2 12 2C10.6313 2 9 2.69385 9 6V7H2V21H22V7H15ZM10 6C10 3.31104 11.1416 3 12 3C12.8584 3 14 3.31104 14 6V7H10V6ZM9 8V10H10V8H14V10H15V8H21V17H3V8H9ZM3 20V18H21V20H3Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <div class="cart-container">
+                        <button class="cartBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 7V6C15 2.69385 13.3682 2 12 2C10.6313 2 9 2.69385 9 6V7H2V21H22V7H15ZM10 6C10 3.31104 11.1416 3 12 3C12.8584 3 14 3.31104 14 6V7H10V6ZM9 8V10H10V8H14V10H15V8H21V17H3V8H9ZM3 20V18H21V20H3Z" fill="currentColor"/>
+                            </svg>
+
+                            Tu carrito (0)
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay mobileMenuOverlay"></div>
+
+        <div class="header-cont-mobile">
+            <div class="slider-mobile-cont">
+                <button class="prevM">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.2 5h-1.4l-7 7 7 7h1.4l-7-7 7-7Z"/>
+                    </svg>
+                </button>
+                <div class="header-slider">
+                    <div class="slidesM">
+                        <div class="slideM">
+                            <p>ENVÍO GRATIS en pedidos desde 50 capsulas</p> 
+                        </div>
+                    
+                        <div class="slideM">
+                            <p>3 cuotas SIN  INTERÉS a partir de $164.700</p>
+                        </div>
+
+                        <div class="slideM">
+                            <p>Retirá tu pedido GRATIS en tu boutique más cercana en 1 hora</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="nextM">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9.21 5H7.8l6.99 7-6.99 7h1.41l6.99-7-6.99-7Z"/>
+                    </svg>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="header-links-cont">
+            <div class="header-links">
+                <ul>
+                    <li class="main-links"><a href="#" class="link">Promociones</a></li>
+                    <li class="main-links"><a href="#" class="link">Café</a></li>
+                    <li class="main-links"><a href="#" class="link">Máquinas</a></li>
+                    <li class="main-links"><a href="#" class="link">Accesorios</a></li>
+                    <li class="main-links"><a href="#" class="link">Servicios</a></li>
+                    <li class="main-links"><a href="#" class="link">Coffee Lovers</a></li>
+                    <li class="main-links"><a href="#" class="link">Reciclaje</a></li>
+                    <li class="main-links"><a href="#" class="link">Ayuda</a></li>
+                    <li class="main-links"><a href="#" class="link">Professional</a></li>
+                    <li class="main-links"><a href="#" class="link">Seguí tu pedido</a></li>
+                </ul>
+
+                <!-- -------------------------------------------------- -->
+                <div class="menu">
+                    <ul class="menu-open cafe" data-menu="Café">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Pedí tus capsulas</p>
+                                <img src="img/Cafe-Bubble.avif" alt="cafe1" class="img-menu">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Packs de café</p>
+                                <img src="img/Packs-Bubble.avif" alt="packs" class="img-menu">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Encontrá tu café ideal</p>
+                                <img src="img/cafe.avif" alt="cafe2" class="img-menu">
+                            </a>
+                        
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#" class="item">
+                                <img src="img/plan-maestro.avif" alt="plan-maestro" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+                <!-- ------------------------------------------------- -->
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Máquinas">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Comprá tu máquina</p>
+                                <img src="img/Machine-Bubble.avif" alt="machine">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Activá tu garantía</p>
+                                <img src="img/Register-machine.avif" alt="register-machine">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Servicio técnico para tu máquina</p>
+                                <img src="img/machinecare2.0-panelelement-400x400.avif" alt="machinecare2.0">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/plan-maestro.avif" alt="plan-maestro" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Accesorios">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Comprá accesorios</p>
+                                <img src="img/accesorio1.avif" alt="accesorio1">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Tazas de café</p>
+                                <img src="img/accesorio2.avif" alt="accesorio2">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Recycling Bin</p>
+                                <img src="img/accesorio3.avif" alt="accesorio3">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/plan-maestro.avif" alt="plan-maestro" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Servicios">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Cómo hacer mi pedido</p>
+                                <img src="img/servicios1.avif" alt="servicios1">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Servicios de entrega</p>
+                                <img src="img/servicios2.avif" alt="servicios2">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Servicio técnico para tu máquina</p>
+                                <img src="img/servicios3.avif" alt="servicios3">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/servicios4.avif" alt="servicios4" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Reciclaje">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Puntos de reciclaje</p>
+                                <img src="img/reciclaje1.avif" alt="reciclaje1">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Campaña de reciclaje</p>
+                                <img src="img/reciclaje2.avif" alt="reciclaje2">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Empresa B</p>
+                                <img src="img/reciclaje3.avif" alt="reciclaje3">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/reciclaje4.avif" alt="reciclaje4" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Ayuda">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Preguntas frecuentes</p>
+                                <img src="img/ayuda1.avif" alt="ayuda1">
+                                <p style="color: #418200;cursor: pointer; font-size: 15px; font-weight: bold;">Servicio técnico para tu máquina</p>
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Whatsapp</p>
+                                <img src="img/ayuda2.avif" alt="ayuda2">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Contactanos</p>
+                                <img src="img/ayuda3.avif" alt="ayuda3">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/servicios4.avif" alt="servicios4" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+                <div class="menu">
+                    <ul class="menu-open" data-menu="Professional">
+                        <li class="items">
+                            <a href="#" class="item">
+                                <p>Restaurantes</p>
+                                <img src="img/pro1.avif" alt="pro1">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Hoteles</p>
+                                <img src="img/pro2.avif" alt="pro2">
+                            </a>
+                            <div class="divisor"></div>
+                            <a href="#" class="item">
+                                <p>Oficinas</p>
+                                <img src="img/pro3.avif" alt="pro3">
+                            </a>
+                        </li>
+                        <div class="divisor"></div>
+                        <li>
+                            <a href="#">
+                                <img src="img/pro4.avif" alt="pro4" style="padding-left: 10px;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ------------------------------------------------- -->
+
+            </div>
+
+        </div>
+
+        <div class="overlay loginOverlay"></div>
+        <div class="overlay cartOverlay"></div>
+    </header>
+    
+
+    <script src="js/navbar-links.js"></script>
+    <script src="js/login-register.js"></script>
+    <script src="js/cart-menu.js"></script>
+    <script src="js/search-btn.js"></script>
+    <script src="js/nav-slider-v2.js"></script>
+    <script src="js/nav-slider-mobile.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/dropdown-mobile.js"></script>
+</body>
+</html>
