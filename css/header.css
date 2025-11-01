@@ -152,8 +152,6 @@ a{
 .header-links-cont{
     width: 100%;
     height: 47px;
-    z-index: -1;
-    position: absolute;
 }
 
 .header-links{

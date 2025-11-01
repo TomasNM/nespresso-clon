@@ -29,13 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function abrirMenu(){
         overlay.classList.add('active');
-        overlayMobile.classList.add('active');
         cartMenu.classList.add('active');
     }
 
     function cerrarMenu(){
         overlay.classList.remove('active');
-        overlayMobile.classList.remove('active');
         cartMenu.classList.remove('active');
+        overlayMobile.classList.remove('active');
     }
 })

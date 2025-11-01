@@ -1,0 +1,31 @@
+.container-main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-slider{
+    width: 90%;
+    max-width: 1760px;
+    height: 338px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.slide-one{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Main-Banner1.avif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.slide-scnd{
+    display: none;
+}
