@@ -56,29 +56,29 @@
     }
 
     @font-face {
-        font-family: 'NespressoLucas Regular';
+        font-family: 'NespressoLucas';
         font-style: normal;
-        font-weight: normal;
-        src: local('NespressoLucas Regular'), url('NespressoLucas-Regular.woff2') format('woff2');
+        font-weight: 400;
+        src: url('NespressoLucas-Regular.woff2') format('woff2');
     }
 
     @font-face {
-        font-family: 'NespressoLucas Light';
+        font-family: 'NespressoLucas';
         font-style: normal;
-        font-weight: normal;
-        src: local('NespressoLucas Light'), url('NespressoLucas-Light.woff2') format('woff2');
+        font-weight: 300;
+        src: url('NespressoLucas-Light.woff2') format('woff2');
     }
 
     @font-face {
-        font-family: 'NespressoLucas Med';
+        font-family: 'NespressoLucas';
         font-style: normal;
-        font-weight: normal;
-        src: local('NespressoLucas Med'), url('NespressoLucas-Med.woff2') format('woff2');
+        font-weight: 500;
+        src: url('NespressoLucas-Med.woff2') format('woff2');
     }
 
     @font-face {
-        font-family: 'NespressoLucas Bold';
+        font-family: 'NespressoLucas';
         font-style: normal;
-        font-weight: normal;
-        src: local('NespressoLucas Bold'), url('NespressoLucas-Bold.woff2') format('woff2');
+        font-weight: 700;
+        src: url('NespressoLucas-Bold.woff2') format('woff2');
     }

@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     startEvents();
 
     function startEvents() {
-        registerBtn.addEventListener('click', () => {
+        registerBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             if(registerMenu.classList.contains('active')){
                 cerrarMenu();
             }else{
@@ -26,10 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function abrirMenu() {
         registerMenu.classList.add('active');
         overlay.classList.add('active');
+
+        window.bloquearScroll();
     }
 
     function cerrarMenu(){
         registerMenu.classList.remove('active');
         overlay.classList.remove('active');
+
+        window.desbloquearScroll();
     }
 })

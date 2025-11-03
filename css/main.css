@@ -1,31 +1,113 @@
-.container-main{
+.hero-cont{
     width: 100%;
     height: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.main-hero{
+    width: 100%;
+    max-width: 1920px;
+    height: 404px;
+    background-image: url(../img/Cyber-Banner1.avif);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.main-slider{
-    width: 90%;
-    max-width: 1760px;
-    height: 338px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    margin: 20px auto;
+
+@media (max-width: 768px){
+    .main-hero{
+        background-image: url(../img/Cyber-Banner-Mobile1.avif);
+        background-position: center 40%;
+    }
 }
 
-.slide-one{
+.hero-text-cont{
+    max-width: 1160px;
     width: 100%;
     height: 100%;
-    background-image: url(../img/Main-Banner1.avif);
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.slide-scnd{
-    display: none;
+.hero-text-cont h2{
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.text-hero{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.hero-btn{
+    width: 200px;
+    height: 50px;
+    border: transparent;
+    background-color: #6834CC;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.hero-btn:hover{
+    background-color: white;
+    border: 1px solid black !important;
+    color: black;
+}
+
+.terminos{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    font-size: 12px;
+    margin-top: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.terminos:hover{
+    border-bottom: 2px solid black;
+}
+
+@media (max-width: 1000px){
+    .main-hero{
+        height: 500px;
+    }
+
+    .hero-text-cont{
+        align-items: center;
+    }
+
+    .hero-text-cont h2{
+        margin-top: 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .text-hero{
+        margin-top: 220px;
+    }
+
+    .hero-btn{
+        width: 90%;
+    }
+
+    .caps{
+        display: none;
+    }
+}
+
+main{
+    height: 2000px;
 }

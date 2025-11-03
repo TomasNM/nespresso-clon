@@ -2,13 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartBtn = document.querySelector('.cartBtn');
     const cartMenu = document.querySelector('.cartMenu');
     const closeCartBtn = document.querySelector('.close-cart-btn');
-    const overlay = document.querySelector('.cartOverlay');
+    const overlayCart = document.querySelector('.cartOverlay');
     const overlayMobile = document.querySelector('.overlayCartMobile');
+
+    
 
     startEvents();
 
     function startEvents(){
-        cartBtn.addEventListener('click', () => {
+        cartBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             if(cartMenu.classList.contains('active')){
                 cerrarMenu();
             }else{
@@ -28,13 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function abrirMenu(){
-        overlay.classList.add('active');
+        overlayCart.classList.add('active');
         cartMenu.classList.add('active');
+
+        window.bloquearScroll();
     }
 
     function cerrarMenu(){
-        overlay.classList.remove('active');
+        overlayCart.classList.remove('active');
         cartMenu.classList.remove('active');
         overlayMobile.classList.remove('active');
+
+        window.desbloquearScroll();
     }
+
 })
