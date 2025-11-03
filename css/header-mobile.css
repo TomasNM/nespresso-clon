@@ -140,7 +140,8 @@
     /* Menú mobile */
 
     .menu-mobile-cont{
-        position: absolute;
+        position: fixed;
+        top: 0;
         width: 87%;
         height: 100%;
         background-color: white;

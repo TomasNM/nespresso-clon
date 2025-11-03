@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function abrirMenu(){
         menu.classList.add('active');
         overlay.classList.add('active');
+        window.bloquearScroll();
     }
 
     function cerrarMenu(){
         menu.classList.remove('active');
         overlay.classList.remove('active');
+        window.desbloquearScroll();
     }
 })
