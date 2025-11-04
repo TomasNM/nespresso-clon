@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerBtn = document.querySelector('.registerBtn');
     const registerMenu = document.querySelector('.registerMenu');
     const overlay = document.querySelector('.loginOverlay');
+    const cartBtn = document.querySelector('.cartBtn');
 
     startEvents();
 
@@ -21,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!registerMenu.contains(e.target) && !registerBtn.contains(e.target)){
                 cerrarMenu();
             }
+        })
+
+        cartBtn.addEventListener('click', () => {
+            cerrarMenu();
         })
     }
 

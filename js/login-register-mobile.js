@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerBtn = document.querySelector('.register-mobile');
     const registerMenu = document.querySelector('.registerMenuMobile');
     const overlay = document.querySelector('.overlayRegistMobile');
+    const cartBtn = document.querySelector('.cartMobile');
 
     startEvents();
 
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!registerMenu.contains(e.target) && !registerBtn.contains(e.target)){
                 cerrarMenu();
             }
+        })
+
+        cartBtn.addEventListener('click', () => {
+            cerrarMenu();
         })
     }
 

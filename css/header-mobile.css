@@ -8,9 +8,28 @@
         display: none;
     }
 
-    button{
+    .register-mobile{
         background-color: none !important;
         border: none !important;
+    }
+
+    .cartMobile{
+        background-color: none !important;
+        border: none !important;
+    }
+    
+    .searchMobile{
+        background-color: none !important;
+        border: none !important;
+    }
+
+    .closeSearch{
+        background-color: none !important;
+        border: none !important;
+    }
+
+    .burgerMenu{
+        border: none;
     }
 
     .logoMobile a svg{
