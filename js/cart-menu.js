@@ -29,8 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-        loginBtn.addEventListener('click', () => {
-            cerrarMenu();
+        loginBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(cartMenu.classList.contains('active')){
+                cerrarMenu();
+                if(!document.body.classList.contains('bloquearScroll')){
+                    window.bloquearScroll();
+                }
+            }
         })
     }
 

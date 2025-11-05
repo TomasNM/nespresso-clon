@@ -1,3 +1,8 @@
+::selection{
+    background-color: black;
+    color: white;
+}
+
 .hero-cont{
     width: 100%;
     height: auto;
@@ -9,7 +14,7 @@
     width: 100%;
     max-width: 1920px;
     height: 404px;
-    background-image: url(../img/Cyber-Banner1.avif);
+    background-image: url(../img/Cyber-Banner2.avif);
     background-position: center right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +27,7 @@
 
 @media (max-width: 768px){
     .main-hero{
-        background-image: url(../img/Cyber-Banner-Mobile1.avif);
+        background-image: url(../img/Cyber-Banner-Mobile2.avif);
         background-position: center 40%;
     }
 }
@@ -80,23 +85,33 @@
     border-bottom: 2px solid black;
 }
 
+.hero-bottom{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
 @media (max-width: 1000px){
     .main-hero{
         height: 500px;
+        background-position: center;
     }
 
     .hero-text-cont{
         align-items: center;
+        justify-content: space-between;
     }
 
     .hero-text-cont h2{
-        margin-top: 0px;
+        margin-top: 80px;
         font-size: 30px;
         text-align: center;
     }
 
-    .text-hero{
-        margin-top: 220px;
+    .hero-bottom{
+        margin-bottom: 20px;
+        align-items: center;
     }
 
     .hero-btn{
@@ -119,6 +134,7 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    background-color: #FAF9F8;
 }
 
 .sliders-cont{
@@ -198,4 +214,235 @@
 
 .bnft-dots{
     display: none;
+}
+
+/* ================================================ */
+
+.packs-cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 40px 0px 120px;
+}
+
+.packs-section-cont{
+    position: relative;
+    max-width: 1208px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.packs-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.packs-rec{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.all-coffee{
+    color: #876C43;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #876C43;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.all-coffee:hover{
+    border-bottom: 2px solid #876C43;
+}
+
+.packs-slider-cont{
+    width: 100%;
+    max-width: 1208px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.packs-slider{
+    width: max-content;
+    height: auto;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    transition: all .2s ease-in-out;
+}
+
+.pack{
+    width: 360px;
+    height: 492px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px -1px 12px 0px rgba(0,0,0,0.1);
+}
+
+.pack-top{
+    width: 360px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.pack-top img{
+    width: 160px;
+    height: 160px;
+}
+
+.pack-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding: 8px 32px 32px;
+}
+
+.pack-resume h3{
+    font-size: 24px;
+}
+
+.pack-resume p{
+    font-size: 16px;
+}
+
+.price span{
+    font-size: 20px;
+    font-weight: 700;
+    color: #257A57;
+}
+
+.pack-buy p:nth-child(2){
+    font-size: 14px;
+    color: #6F6F70;
+    font-weight: 500;
+}
+
+.pack-buy-btn{
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 20px;
+    background-color: #6834CC;
+    color: white;
+    border: 1px solid #6834CC;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.pack-buy-btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.pack-info button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.pack-info button span{
+    font-size: 20px;
+    color: #876C43;
+    background-color: transparent;
+    font-weight: 700;
+    border-bottom: 1px solid #876C43;
+}
+
+.pack-buy{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pack-nav-dots{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+}
+
+.pack-dot{
+    width: 32px;
+    height: 35px;
+    border: none;
+    padding: 11px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.pack-dot:hover span{
+    background-color: #17171A;
+}
+
+.pack-dot span{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #8B8B8C;
+    display: flex;
+    transition: all .2s ease-in-out;
+}
+
+.d-1.active{
+    width: 13px;
+    height: 13px;
+    background-color: #17171A;
+}
+
+.pack-nav-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background: #17171A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pack-nav-btn.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.pack-nav-btn:hover{
+    background-color: white;
+    color: #17171A;
+}
+
+.prev-p{
+    left: -10px;
+}
+
+.next-p{
+    right: 10px;
 }

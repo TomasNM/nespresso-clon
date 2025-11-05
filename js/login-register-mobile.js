@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         cartBtn.addEventListener('click', () => {
-            cerrarMenu();
+            if(registerMenu.classList.contains('active')){
+                cerrarMenu();
+            }
         })
     }
 

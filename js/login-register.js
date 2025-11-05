@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
 
-        cartBtn.addEventListener('click', () => {
-            cerrarMenu();
+        cartBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if(registerMenu.classList.contains('active')){
+                cerrarMenu();
+            }
         })
     }
 
