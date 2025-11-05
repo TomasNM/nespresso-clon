@@ -241,6 +241,35 @@
     padding-right: 24px;
 }
 
+
+.packs-cont {
+  position: relative;
+}
+
+/* Efecto de desenfoque o desvanecido a los costados */
+.packs-cont::before,
+.packs-cont::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20%; /* ancho del degradado */
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.packs-cont::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.packs-cont::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+
+
 .packs-txt{
     display: flex;
     flex-direction: column;
