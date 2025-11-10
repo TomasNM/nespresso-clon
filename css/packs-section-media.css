@@ -1,0 +1,11 @@
+@media (min-width: 800px){
+    .pack-slide{
+        width: 344px;
+        flex: 0 0 auto;
+        padding: 0 calc((100% - 728px) / 2);
+    }
+
+    .packs-slider{
+        gap: 40px;
+    }
+}

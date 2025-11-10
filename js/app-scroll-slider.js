@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         prevSlideBtn.addEventListener('click', () => {
             prevSlide();
         })
+        document.addEventListener('resize', () => {
+            updateSlide();
+        })
     }
 
     function updateSlide(){
@@ -36,12 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         currentSlide.innerHTML = `${slideActual}`;
+        updateOpacity();
         // console.log(`Estás en el slide ${index + 1}`);
     }
 
     function nextSlide(){
-        const slideWidth = slide[0].offsetWidth + 16; // gap
-        slider.scrollLeft += slideWidth;
+
+        let slideWidth = slide[0].offsetWidth + 16; // gap
+
+        if(window.innerWidth < 800){
+            
+            slider.scrollLeft += slideWidth;
+        }
+        
+        if(window.innerWidth >= 800){
+            slideWidth = slide[0].offsetWidth + slide[1].offsetWidth + 40;
+            slider.scrollLeft += slideWidth;
+        }
 
     }
 
@@ -50,6 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.scrollLeft -= slideWidth;
     }
 
+    function updateOpacity(){
+        slide.forEach((eachSlide, i) => {
+            if(window.innerWidth < 800){
+                if(i === slideActual - 1){
+                    eachSlide.style.opacity = '1';
+                }else if(i === slideActual -2 || i === slideActual){
+                    eachSlide.style.opacity = '0.4';
+                }
+            }else{
+                eachSlide.style.opacity = '1';
+            }
+            
+        })
+    }
     
-
+    updateOpacity();
 })
