@@ -377,4 +377,11 @@
     color: white;
     border-radius: 25px;
     height: 80px;
+    transition: all .2s ease-in-out;
+}
+
+.addCart:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }
