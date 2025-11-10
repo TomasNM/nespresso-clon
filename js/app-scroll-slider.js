@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const total = slide.length;
     let slideActual = 1;
-    let index = 1;
+
     totalSlides.innerHTML = `${total}`;
     currentSlide.innerHTML = `${slideActual}`;
 
@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         nextSlideBtn.addEventListener('click', () => {
             nextSlide();
+        })
+        prevSlideBtn.addEventListener('click', () => {
+            prevSlide();
         })
     }
 
@@ -37,18 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function nextSlide(){
-        index++;
-        if(index > slide.length){
-            index = 1;
-        }else if (index < 1){
-            index = slide.length;
-        }
+        const slideWidth = slide[0].offsetWidth + 16; // gap
+        slider.scrollLeft += slideWidth;
 
-        updateCurrentSlide();
     }
 
-    function updateCurrentSlide(){
-        slider.style.transform = `translateX(calc(-100% * ${index} - ${slider.offsetWidth} / ${slide[0].offsetWidth + 16}))`;
-        console.log(index);
+    function prevSlide(){
+        const slideWidth = slide[0].offsetWidth + 16;
+        slider.scrollLeft -= slideWidth;
     }
+
+    
+
 })

@@ -238,7 +238,7 @@
     overflow-x: scroll;
     display: flex;
     gap: 16px;
-    padding: 48px;
+    padding: 48px 48px 20px 48px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     width: 100%;
@@ -251,6 +251,10 @@
     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
     scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .packs-slider::-webkit-scrollbar{
@@ -282,4 +286,95 @@
     background-color: black;
     border: 1px solid black;
     color: white;
+}
+
+.prevSlideBtn.inactive, .nextSlideBtn.inactive{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.top-packs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 10px;
+}
+
+.packs-text{
+    font-size: 30px;
+}
+
+.pack-link{
+    font-size: 19px;
+    padding: 10px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    color: #876C43;
+}
+
+.pack-link span{
+    border-bottom: solid 1px #876C43;
+}
+
+.top-slide img{
+    object-fit: contain;
+    height: 160px;
+}
+
+.bottom-slide{
+    padding: 8px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.p-title{
+    font-size: 20px;
+    text-align: center;
+}
+
+.p-txt{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.moreInfo{
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 6px 6px 8px;
+    margin-bottom: 20px;
+}
+
+.moreInfo a{
+    color: #876C43;
+    border-bottom: 1px solid #876C43;
+}
+
+.price{
+    color: #257A57;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.sleeves{
+    font-size: 14px;
+    color: #6F6F70;
+}
+
+.addCart{
+    padding: 10px 24px;
+    font-size: 20px;
+    border: 1px solid #6834CC;
+    background-color: #6834CC;
+    color: white;
+    border-radius: 25px;
+    height: 80px;
 }
