@@ -381,6 +381,7 @@
     width: 48px;
     height: 48px;
     transition: all .2s ease-in-out;
+    color: black;
 }
 
 .slideBtn:hover{

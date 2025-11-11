@@ -11,11 +11,13 @@
     .register-mobile{
         background-color: none !important;
         border: none !important;
+        color: black;
     }
 
     .cartMobile{
         background-color: none !important;
         border: none !important;
+        color: black;
     }
     
     .searchMobile{
