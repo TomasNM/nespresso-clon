@@ -234,6 +234,22 @@
         font-size: 14px;
     }
 
+    .promotion-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 464px;
+    }
+
+    .promotion-bg{
+        width: 95% !important;
+        background-image: url(../img/nespresso-promotion-mobile.avif) !important;
+    }
+
+    .promotion-txt-2{
+        margin: 10px;
+    }
+
 }
 
 
@@ -457,8 +473,8 @@
 .addCart{
     padding: 10px 24px;
     font-size: 20px;
-    border: 1px solid #6834CC;
-    background-color: #6834CC;
+    border: 1px solid #257A57;
+    background-color: #257A57;
     color: white;
     border-radius: 25px;
     height: 80px;
