@@ -19,6 +19,10 @@
         border: none !important;
         color: black !important;
     }
+
+    .icon{
+        color: black;
+    }
     
     .searchMobile{
         background-color: none !important;
