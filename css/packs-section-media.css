@@ -1,11 +1,33 @@
 @media (min-width: 800px){
     .pack-slide{
-        width: 344px;
-        flex: 0 0 auto;
-        padding: 0 calc((100% - 728px) / 2);
+        flex: 1 0 344px;
     }
 
     .packs-slider{
         gap: 40px;
+        padding: 64px 350px 16px;
+    }
+
+    .packs-slider-cont{
+        width: 100%;
+        overflow: visible;
+    }
+
+    .top-packs{
+        text-align: start;
+        align-items: start;
+    }
+
+    .top-packs-cont{
+        width: 1160px;
+        margin: 0 auto;
+    }
+
+    .addCart{
+        height: auto;
+    }
+
+    .pack-slide{
+        height: auto;
     }
 }

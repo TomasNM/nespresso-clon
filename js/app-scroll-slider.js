@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         document.addEventListener('resize', () => {
             updateSlide();
+            updateOpacity();
         })
     }
 
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if(window.innerWidth >= 800){
-            slideWidth = slide[0].offsetWidth + slide[1].offsetWidth + 40;
+            slideWidth = slide[0].offsetWidth + 40;
             slider.scrollLeft += slideWidth;
         }
 
