@@ -6,214 +6,298 @@
 .hero-cont{
     width: 100%;
     height: auto;
-    position: relative;
-    z-index: 0;
-}
-
-.main-hero{
-    width: 100%;
-    max-width: 1920px;
-    height: 404px;
-    background-image: url(../img/Cyber-Banner2.avif);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-
-@media (max-width: 768px){
-    .main-hero{
-        background-image: url(../img/Cyber-Banner-Mobile2.avif);
-        background-position: center 40%;
-    }
+.hero-bg{
+    width: 90%;
+    height: 386px;
+    border-radius: 30px;
+    background-image: url(../img/Main-Banner1.avif);
+    background-position: center;
+    background-size: cover;
+    transition: all .2s ease-in-out;
 }
 
-.hero-text-cont{
-    max-width: 1160px;
+.hero-bg.scnd{
+    background-image: url(../img/Main-Banner2.avif);
+}
+
+.hero-dots{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.hero-dot{
+    width: 15px;
+    height: 15px;
+    background-color: #BFBFBF;
+    border-radius: 100%;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.hero-dot:hover{
+    background-color: #404040;
+}
+
+.hero-dot.active{
+    background-color: #404040;
+}
+
+.hero-banner-cont{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.hero-banner{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-}
-
-.hero-text-cont h2{
-    font-size: 38px;
-    font-weight: 700;
-    margin-top: 40px;
-}
-
-.text-hero{
-    font-size: 20px;
-    margin-top: 30px;
-}
-
-.hero-btn{
-    width: 200px;
-    height: 50px;
-    border: transparent;
-    background-color: #6834CC;
-    color: white;
-    font-size: 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 10px;
+    gap: 15px;
     transition: all .2s ease-in-out;
 }
 
-.hero-btn:hover{
+.exclusivo{
+    font-size: 20px;
+    padding: 5px 7px;
+    font-weight: 700;
+    color: white;
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+.hero-span{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-terms{
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-text{
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: none;
+    transition: all .2s ease-in-out;
+}
+
+.h-2{
+    color: white;
+    text-shadow: 0px 0px 12px rgba(0,0,0,0.6);
+    font-size: 40px;
+}
+
+.hero-scnd{
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.columnas{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: #ffffff87;
+    gap: 20px;
+    padding: 10px;
+}
+
+.descuentos{
+    font-weight: 700;
+    color: white;
+    font-size: 26px;
+}
+
+.bajada{
+    color: white;
+    font-size: 22px;
+}
+
+.separador{
+    height: 100%;
+    border: 1px solid black;
+}
+
+.col-1, .col-2, .col-3{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-pedido-btn{
+    padding: 12px 24px;
+    background-color: #17171A;
+    color: white;
+    border: 1px solid #17171A;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.hero-pedido-btn:hover{
     background-color: white;
-    border: 1px solid black !important;
     color: black;
 }
 
-.terminos{
-    border-bottom: 1px solid black;
-    cursor: pointer;
-    position: relative;
-    font-size: 12px;
-    margin-top: 20px;
-    transition: all .2s ease-in-out;
+.hero-banner.inactive{
+    display: none;
 }
 
-.terminos:hover{
-    border-bottom: 2px solid black;
-}
-
-.hero-bottom{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-}
-
-@media (max-width: 1000px){
-    .main-hero{
-        height: 500px;
+@media(max-width: 1000px){
+    .hero-bg{
+        width: 98%;
+        height: 502px;
+        background-size: cover;
+        background-repeat: no-repeat;
         background-position: center;
+        background-image: url(../img/Main-Banner1-mobile.avif);
+        margin-top: 10px;
     }
 
-    .hero-text-cont{
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .hero-text-cont h2{
-        margin-top: 80px;
+    .hero-text{
         font-size: 30px;
         text-align: center;
     }
 
-    .hero-bottom{
-        margin-bottom: 20px;
+    .hero-banner{
+        justify-content: center;
         align-items: center;
-    }
-
-    .hero-btn{
+        text-align: center;
         width: 90%;
     }
 
-    .caps{
-        display: none;
+    .hero-first{
+        justify-content: end;
     }
+
+    .hero-pedido-btn{
+        margin-bottom: 40px;
+    }
+
+    .exclusivo{
+        margin-bottom: 200px;
+    }
+
+    .hero-span{
+        margin-bottom: 10px;
+    }
+
+    .hero-banner-cont{
+        justify-content: flex-end;
+    }
+
+    .hero-bg.scnd{
+        background-image: url(../img/Main-Banner2-mobile.avif);
+    }
+
+    .hero-pedido-btn{
+        width: 100%;
+    }
+
+    .hero-scnd{
+        gap: 20px;
+    }
+
+    .columnas{
+        margin-top: 120px;
+    }
+
+    .descuentos{
+        font-size: 22px;
+        color: black;
+    }
+
+    .bajada{
+        color: black;
+        font-size: 14px;
+    }
+
 }
 
 
 /* ======================================================== */
 
-.benefits-cont{
-    max-width: 1905px;
+.nespresso-promotion{
     width: 100%;
-    height: 773px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #FAF9F8;
-}
-
-.sliders-cont{
-    width: 100%;
-    height: auto;
+    height: 512px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-    justify-content: center;
 }
 
-.benefit-txt{
-    font-size: 38px;
-    font-weight: 300;
-    padding-bottom: 32px;
+.promotion-cont{
+    max-width: 1160px;
+    width: 100%;
 }
 
-.cards-cont{
-    display: flex;
-    align-items: center;
-    padding-top: 48px;
-    margin: 12px;
-    overflow: hidden;
-}
-
-.card-bnft{
-    width: 391px;
-    height: auto;
+.promotion-bg{
+    width: 100%;
+    height: 384px;
+    background-image: url(../img/nespresso-promotion.avif);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
-    padding-bottom: 64px;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
-.card-img{
-    border-radius: 10px;
-    margin-bottom: 16px;
+.promotion-txt{
+    font-size: 14px;
+    padding: 8px 0px;
 }
 
-.card-title{
-    font-weight: 500;
-    margin-bottom: 16px;
+.promotion-txt-2{
+    font-size: 25px;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 24px;
 }
 
-.card-p{
-    margin-bottom: 16px;
+.promotion-txt-2 strong{
+    font-weight: 700;
 }
 
-.bnft-btn-cont{
+.canjear-btn{
     display: flex;
-    align-items: flex;
-}
-
-.bnft-btn{
-    background-color: #6834CC;
-    color: white;
-    border: 1px solid #6834CC;
+    align-items: center;
     font-size: 20px;
-    font-weight: 500;
-    padding: 10px 24px;
-    border-radius: 25px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid #17171A;
+    background-color: #17171A;
+    color: white;
+    gap: 6px;
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
 
-.bnft-btn:hover{
+.canjear-btn:hover{
     background-color: white;
-    color: black;
-    border: 1px solid black;
-}
-
-.cards--inner{
-    display: flex;
-    width: max-content;
-}
-
-.bnft-dots{
-    display: none;
+    color: #17171A;
 }
 
 /* ================================================ */
