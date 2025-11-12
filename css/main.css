@@ -329,6 +329,7 @@
 }
 
 .slider-container{
+    position: relative;
     height: auto;
     overflow: hidden;
     width: 100%;
@@ -487,4 +488,8 @@
     background-color: white;
     border: 1px solid black;
     color: black;
+}
+
+.slider-count-desk{
+    display: none;
 }
