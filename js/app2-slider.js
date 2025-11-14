@@ -12,13 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const navDots = document.querySelectorAll('.desk-dot');
     let indexDesk = 0;
 
+    // Tamaño de pantalla
+    let screenWidth = window.innerWidth;
+    let isMobile = screenWidth < 1000;
+
     let index = 0;
+
+    // Detectar si se agregaron los listeners de desktop
+    let deskListenersAdded = false;
 
     updateTotalSlides();
     updateButtons();
     updateCurrentSlide();
+    updateOpacityMob();
     
-    if(window.innerWidth > 1000){
+    if(isMobile === false){
         updateOpacityDesk();
         updateBtnsDesk();
     }
@@ -41,33 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Desktop
 
-        if(window.innerWidth > 1000){
-            prevBtnDesk.addEventListener('click', () => {
-                prevDesk();
-            })
-
-            nextBtnDesk.addEventListener('click', () => {
-                nextDesk();
-            })
+        if(window.innerWidth >= 1000){
+            addDeskListeners();
         }
 
-        
+        navDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                clickDot(i);
+            })
+        })
 
+        // Detectar si es mobile o desktop
         window.addEventListener('resize', () => {
 
-            if(window.innerWidth > 1000){
-                updateOpacityDesk();
-                updateBtnsDesk();
-                index = 0;
-                indexDesk = 0;
+            resetOpacity();
+
+            screenWidth = window.innerWidth;
+            if(screenWidth < 1000){
+                isMobile = true;
+            }else{
+                isMobile = false;
             }
 
-            // if(window.innerWidth <= 1000){
-                
-            // }
-            
-            
+            if(isMobile){
+                updateOpacityMob();
+            }else{
+                updateOpacityDesk();
+            }
+
+            if(!isMobile){
+                addDeskListeners();
+            }
         })
+
     }
 
     function nextSlide(){
@@ -82,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateButtons();
         updateCurrentSlide();
+        updateOpacityMob();
     }
 
     function prevSlide(){
@@ -96,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateButtons();
         updateCurrentSlide();
+        updateOpacityMob();
     }
 
     function updateTotalSlides(){
@@ -130,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             index = currentIndex;
             updateButtons();
             updateCurrentSlide();
+            updateOpacityMob();
         }
     }
 
@@ -139,7 +156,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         updateBtnsDesk();
         updateDots();
-        updateOpacityDesk();
+
+        if(isMobile === false){
+            updateOpacityDesk();
+        }else{
+            updateOpacityMob();
+        }
+        
     }
 
     function prevDesk(){
@@ -178,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastSlide = slides[slides.length - 1];
         const firstSlide = slides[0];
 
+
         if(indexDesk <= 0){
             lastSlide.style.opacity = `40%`;
             lastSlide.style.pointerEvents = 'none';
@@ -193,5 +217,56 @@ document.addEventListener('DOMContentLoaded', () => {
             firstSlide.style.opacity = `1`;
             firstSlide.style.pointerEvents = 'all';
         }
+    }
+
+    function updateOpacityMob(){
+
+        if(isMobile === false){
+            return;
+        }
+
+        slides.forEach((slide, i) => {
+            if(i === index){
+                slide.style.opacity = `1`;
+            }else if(i === index + 1 || i === index - 1){
+                slide.style.opacity = `40%`;
+            }else{
+                slide.style.opacity = `1`;
+            }
+        })
+    }
+
+    function addDeskListeners(){
+        if (!deskListenersAdded){
+            prevBtnDesk.addEventListener('click', () => {
+                prevDesk();
+            })
+
+            nextBtnDesk.addEventListener('click', () => {
+                nextDesk();
+            })
+        }
+
+        deskListenersAdded = true;
+    }
+
+    function resetOpacity(){
+        slides.forEach(slide => {
+            slide.style.opacity = '1';
+            slide.style.pointerEvents = 'all'
+        })
+    }
+
+    function clickDot(i){
+        if(i === indexDesk){
+            return;
+        }
+
+        indexDesk = i;
+
+        sliderDesk.style.transform = `translateX(-${indexDesk * 25}%)`;
+        updateDots();
+        updateOpacityDesk();
+        updateBtnsDesk();
     }
 })
