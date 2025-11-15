@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             resetOpacity();
             updateSlide();
+            updateCurrentSlide();
 
             screenWidth = window.innerWidth;
             if(screenWidth < 1000){
