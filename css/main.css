@@ -649,42 +649,93 @@
     cursor: pointer;
 }
 
-@media (max-width: 1000px){
-    .exp-container{
-        flex-direction: column;
-        padding: 20px;
-        flex: 1 1 100%;
+/* ====================================================== */
+
+.discover-container{
+    width: 100%;
+    height: auto;
+}
+
+.discover-inner{
+    max-width: 1192px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.discover-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discover-img img{
+    width: 560px;
+    height: 420px;
+}
+
+.discover-p{
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.discover-p-2{
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.discover-txt{
+    max-width: 500px;
+}
+
+.discover-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.discover-btn{
+    padding: 12px 24px;
+    font-size: 20px;
+    background-color: #257A57;
+    border: 1px solid #257A57;
+    border-radius: 30px;
+    color: white;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.discover-btn:hover{
+    background-color: white;
+    color: #257A57;
+    border: 1px solid #257A57;
+}
+
+@media(max-width: 1000px){
+    .discover-cont{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .discover-container{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .discover-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .discover-img img{
+        width: 90%;
         height: auto;
     }
 
-    .exp-img{
-        width: 100%;
-        margin: 0 auto;
-        height: 300px;
-    }
-
-    .exp-products{
-        padding: 0;
-        width: 100%;
-    }
-
-    .bottom-exp{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-exp h3{
-        font-size: 32px;
-    }
-
-    .exp-prod{
-        width: 100%;
-    }
-
-    .exp-prod-info{
-        width: 100%;
-        padding: 10px;
+    .discover-txt{
+        padding: 20px;
     }
 }

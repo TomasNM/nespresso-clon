@@ -1,0 +1,39 @@
+@media (max-width: 1000px){
+    .exp-container{
+        flex-direction: column;
+        padding: 20px;
+        flex: 1 1 100%;
+        height: auto;
+    }
+
+    .exp-img{
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+    }
+
+    .exp-products{
+        padding: 0;
+        width: 100%;
+    }
+
+    .bottom-exp{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-exp h3{
+        font-size: 32px;
+    }
+
+    .exp-prod{
+        width: 100%;
+    }
+
+    .exp-prod-info{
+        width: 100%;
+        padding: 10px;
+    }
+}
