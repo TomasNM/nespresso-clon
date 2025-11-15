@@ -322,6 +322,7 @@
 .recomendados{
     width: 100%;
     overflow: hidden;
+    padding-bottom: 40px;
 }
 
 .rec-inner{
@@ -530,90 +531,160 @@
     background-color: #17171A;
 }
 
-@media(max-width: 1000px){
-    .slide-pack{
-        flex: 0 0 auto;
-        width: 279px;
-        scroll-snap-align: center;
-        text-align: center;
-    }
+/* =========================================================== */
 
-    .slider-packs{
-        padding-left: calc((100% - 1246px) / 2 + 100px);
-        padding-right: calc((100% - 1246px) / 2 + 100px);
-        width: max-content;
-        gap: 20px;
-    }
+.cafe-experiencia{
+    width: 100%;
+    height: 1000px;
+}
 
-    .slider-container{
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-    }
+.exp-container{
+    max-width: 1116px;
+    width: 100%;
+    height: 820px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+}
 
-    .slider-container::-webkit-scrollbar{
-        display: none;
-    }
+.exp-products{
+    width: 544px;
+    padding: 0px 80px 0px 120px;
+}
 
-    .rec-inner{
-        width: 100%;
-        overflow: hidden;
-    }
+.exp-img{
+    width: 572px;
+    height: 820px;
+    background-image: url(../img/experiencia.avif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
 
-    .slide-txt{
-        font-size: 20px;
-    }
+.top-exp{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
 
-    .slide-txt-2{
-        font-size: 16px;
-    }
+.top-exp h3{
+    font-size: 40px;
+    font-weight: 200;
+    text-align: end;
+}
 
-    .slider-nav-mobile{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+.exp-txt{
+    font-size: 16px;
+    text-align: end;
+}
 
-    .prevSlideBtn-mob, .nextSlideBtn-mob{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 100%;
-        background-color: transparent;
-        border: 1px solid transparent;
-        transition: all .2s ease-in-out;
+.exp-prod{
+    padding-bottom: 16px;
+    width: 344px;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.exp-prod-img{
+    width: 82px;
+    height: 82px;
+    background-color: #F3EEE6;
+    border-radius: 10px;
+}
+
+.exp-prod-info{
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.exp-prod-link{
+    font-size: 16px;
+}
+
+.exp-prod-txt{
+    font-size: 14px;
+    color: #6F6F70;
+}
+
+.exp-prod-price{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.exp-btn-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-btn{
+    width: 32px;
+    height: 32px;
+    background-color: #17171A;
+    border: 1px solid #17171A;
+    transition: all .2s ease-in-out;
+    border-radius: 100%;
+    position: relative;
+}
+
+.exp-btn span{
+    position: absolute;
+    font-size: 28.8px;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.exp-btn:hover{
+    background-color: white;
+    span{
         color: #17171A;
+    };
+    cursor: pointer;
+}
+
+@media (max-width: 1000px){
+    .exp-container{
+        flex-direction: column;
+        padding: 20px;
+        flex: 1 1 100%;
+        height: auto;
     }
 
-    .nextSlideBtn-mob.hidden{
-        opacity: 0;
-        pointer-events: none;
+    .exp-img{
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
     }
 
-    .prevSlideBtn-mob.hidden{
-        opacity: 0;
-        pointer-events: none;
+    .exp-products{
+        padding: 0;
+        width: 100%;
     }
 
-    .prevSlideBtn-mob:hover, .nextSlideBtn-mob:hover{
-        background-color: #17171A;
-        border: 1px solid #17171A;
-        color: white;
+    .bottom-exp{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .packs-recomendados{
-        font-size: 24px;
+    .top-exp h3{
+        font-size: 32px;
     }
 
-    .nav-desktop{
-        display: none;
+    .exp-prod{
+        width: 100%;
     }
 
-    .prevSlideBtn-desk, .nextSlideBtn-desk{
-        display: none;
+    .exp-prod-info{
+        width: 100%;
+        padding: 10px;
     }
-
 }

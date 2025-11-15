@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => {
 
             resetOpacity();
+            updateSlide();
 
             screenWidth = window.innerWidth;
             if(screenWidth < 1000){
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateSlide(){
         const scrollLeft = slider.scrollLeft;
-        const clientWidth = slider.clientWidth - (65 * 2);
+        const clientWidth = slides[0].clientWidth;
         const currentIndex = Math.round(scrollLeft / clientWidth);
 
         if(currentIndex != index){
