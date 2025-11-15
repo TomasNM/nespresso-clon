@@ -141,10 +141,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateSlide(){
         const scrollLeft = slider.scrollLeft;
         const clientWidth = slides[0].clientWidth;
+
+        if(clientWidth === 0) return;
+
         const currentIndex = Math.round(scrollLeft / clientWidth);
 
-        if(currentIndex != index){
-            index = currentIndex;
+        const limitarIndex = Math.max(0, Math.min(currentIndex, slides.length - 1));
+
+        if(limitarIndex != index){
+            index = limitarIndex;
             updateButtons();
             updateCurrentSlide();
             updateOpacityMob();
